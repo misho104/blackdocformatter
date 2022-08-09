@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "blackdocformatter"
+version = "0.0.1"
+description = "A Python package to run black and docformatter."
+authors = ["Sho Iwamoto (Misho) <webmaster@misho-web.com>"]
+# license = "MIT"
+# readme = "README.md"
+# repository = "https://github.com/misho104/blackdocformatter"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry>=1.1.13"]
+build-backend = "poetry.masonry.api"
