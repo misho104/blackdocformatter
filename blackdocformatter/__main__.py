@@ -1,6 +1,4 @@
-"""
-A module to run both black and docformatter.
-"""
+"""A module to run both black and docformatter."""
 
 import sys
 from click.testing import CliRunner
@@ -24,13 +22,13 @@ def run_doc():
     return out.getvalue()
 
 
-diff_black = run_black().rstrip()
-diff_doc = run_doc().rstrip()
-
-if diff_black:
+# Linebreak (\n) is appended by print function.
+if diff_black := run_black().rstrip():
     # Apply Black and ignore docformat to avoid conflicted diff.
     print(diff_black)
-elif diff_doc:
+elif diff_doc := run_doc().rstrip():
+    # Display docformatter result (with \n appended)
     print(diff_doc)
 else:
+    # no line break to show
     pass
